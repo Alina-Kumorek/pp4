@@ -1,0 +1,13 @@
+server:
+port: 9999
+
+spring:
+datasource:
+url: jdbc:h2:mem:testdb
+username: sa
+password: ~
+
+h2:
+console:
+enabled: true
+path: /my-h2-db
