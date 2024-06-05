@@ -22,8 +22,8 @@ public class ProductCatalogTest {
     @Test
     void itAllowsToAddProducts() {
         ProductCatalog catalog = thereIsProductCatalog();
-        String id = catalog.createProduct("Lego set 8084", "niece one");
 
+        catalog.addProduct("Lego set 8084", "niece one");
         List<Product> products = catalog.allProducts();
 
         assertThat(products).hasSize(1);
@@ -32,23 +32,24 @@ public class ProductCatalogTest {
     @Test
     void itAllowsToLoadProductDetails() {
         ProductCatalog catalog = thereIsProductCatalog();
-        String id = catalog.createProduct("Lego set 8084", "niece one");
+        String id = catalog.addProduct("Lego set 8084", "niece one");
 
-        Product loaded = catalog.getProductDSetails(id);
+        Product loaded = catalog.getProductBy(id);
 
-        assertThat(loaded.getName()).isEqualTo("Lego set 8084");
+        assertThat(id).isEqualTo(loaded.getId());
     }
 
     @Test
     void itChangesPriceForProducts() {
         ProductCatalog catalog = thereIsProductCatalog();
-        String id = catalog.createProduct("Lego set 8084", "niece one");
+        String id = catalog.addProduct("Lego set 8084", "niece one");
 
         catalog.changePrice(id, BigDecimal.valueOf(10.10));
-        Product loaded = catalog.getProductDSetails(id);
+        Product loaded = catalog.getProductBy(id);
 
         assertThat(loaded.getPrice()).isEqualTo(BigDecimal.valueOf(10.10));
     }
 
-    private ProductCatalog thereIsProductCatalog() {return new ProductCatalog();}
+    private static ProductCatalog thereIsProductCatalog() {
+        return new ProductCatalog(new ArrayListProductStorage());}
 }

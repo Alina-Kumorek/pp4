@@ -2,6 +2,7 @@ package pl.kumorek.ecommerce;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import pl.kumorek.ecommerce.catalog.ArrayListProductStorage;
 import pl.kumorek.ecommerce.catalog.ProductCatalog;
 
 //http://localhost:8080/
@@ -15,8 +16,8 @@ public class App {
 
     @Bean
     ProductCatalog createMyProductCatalog() {
-        var catalog = new ProductCatalog();
-        catalog.createProduct("Lego set 8084", "niece one");
+        var catalog = new ProductCatalog(new ArrayListProductStorage());
+        catalog.addProduct("Lego set 8084", "niece one");
         return catalog;
     }
 }
