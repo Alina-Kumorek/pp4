@@ -20,4 +20,22 @@ public class App {
         catalog.addProduct("Lego set 8084", "niece one");
         return catalog;
     }
+
+    @Bean
+    PayUPaymentGateway createPayU () {
+        return new PayUPaymentGateway(
+                new PayUTest(
+
+                )
+        );
+    }
+
+    @Bean
+    SalesFacade createSalesFacade() {
+        return new SalesFacade(
+                new CartStorage(),
+                new OfferCalculator(),
+                PayUPaymentGateway,
+                new ReservatonStorage())
+    }
 }
