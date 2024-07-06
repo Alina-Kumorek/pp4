@@ -1,0 +1,143 @@
+body {
+    background: lightgrey;
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background: cornflowerblue;
+    color: white;
+    font-size: 30px;
+}
+
+hr {
+    border: 10px solid white;
+    border-radius: 5px;
+}
+
+h2 {
+    padding: 30px;
+    background: cornflowerblue;
+    color: white;
+    font-size: 24px;
+}
+
+h2.specials {
+    padding: 30px;
+    background: lightyellow;
+    color: coral;
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.addbutton {
+    background: mediumseagreen;
+    border: 2px solid mediumseagreen;
+}
+
+.addbutton:hover {
+    background-color: white;
+    color: mediumseagreen;
+}
+
+.rembutton {
+    background: coral;
+    border: 2px solid coral;
+}
+
+.rembutton:hover {
+    background-color: white;
+    color: coral;
+}
+
+.checkoutbutton {
+    border: 2px solid mediumseagreen;
+    color: white;
+    background: mediumseagreen;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.checkoutbutton:hover {
+    background-color: white;
+    color: mediumseagreen;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: cornflowerblue;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+td, th {
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr:nth-child(even) {background-color: white;}
+
+tr:nth-child(odd) {background-color: silver;}
+
+.itemsnum {
+    border: 2px solid cornflowerblue;
+    color: white;
+    background: cornflowerblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: left;
+}
+
+.total {
+    border: 2px solid coral;
+    color: white;
+    background: coral;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    float: left;
+}
+
+
