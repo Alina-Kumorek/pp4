@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class AssertJPlaygroundTest {
+public class mvAssertJPlaygroundTest {
 
     @Test
     void playWithAssertJ() {
